@@ -1,0 +1,86 @@
+/* ==============================
+   CSS Reset & Base
+   ============================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==============================
+   Navbar: nav-link styles
+   (used in Navbar.jsx)
+   ============================== */
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+/* ==============================
+   Navbar: Fancy Button Text
+   (used in Navbar.jsx, Form.jsx, FormCareer.jsx)
+   ============================== */
+.fancy-button-text-container {
+  display: flex;
+  flex-direction: column;
+  height: 1.2em;
+  overflow: hidden;
+  line-height: 1.2em;
+}
+
+.fancy-button-text-container span {
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+/* ==============================
+   Scrollbar
+   ============================== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
