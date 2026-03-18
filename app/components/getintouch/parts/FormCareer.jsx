@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import { Button, Stack, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import emailjs from "emailjs-com";
@@ -37,7 +37,7 @@ export default function Form({ setShowForm }) {
 
     try {
       const response = await axios.post(
-        "https://skytextiles.in/api/v1/careersForm/fill-form",
+        apiV1Url("/careersForm/fill-form"),
         form
       );
       setShowForm(false);

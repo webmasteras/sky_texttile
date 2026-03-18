@@ -1,3 +1,4 @@
+import { apiV1Url } from "@/app/constants/api";
 // import Infra from "@/app/components/infra/Infra";
 // import axios from "axios";
 
@@ -14,7 +15,7 @@
 // const fetchData = async () => {
 //   try {
 //     const response = await axios.get(
-//       "https://skytextiles.in/api/v1/seo/getByPageName?pagename=infrastructure"
+//       apiV1Url("/seo/getByPageName?pagename=infrastructure")
 //     );
 //     // setData(response.data.message); // Assuming the response data is an array
 
@@ -85,7 +86,7 @@ export async function generateMetadata() {
 
   try {
     const response = await fetch(
-      "https://skytextiles.in/api/v1/seo/getByPageName?pagename=infrastructure",
+      apiV1Url("/seo/getByPageName?pagename=infrastructure"),
       {
         cache: "no-store", // Fetches fresh data every time
       }
@@ -124,7 +125,7 @@ export default async function Page() {
   // Fetching the H1 and H2 data
   try {
     const response = await fetch(
-      "https://skytextiles.in/api/v1/seo/getByPageName?pagename=infrastructure",
+      apiV1Url("/seo/getByPageName?pagename=infrastructure"),
       {
         cache: "no-store", // Fetch fresh data every time
       }

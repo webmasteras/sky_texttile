@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import Navbar from "../../navbar/Navbar";
 import Footer from "../../footer/Footer";
@@ -55,7 +55,7 @@ export default function Event() {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `https://skytextiles.in/api/v1/blog/get-by-slug/${params.slug}`
+        apiV1Url(`/blog/get-by-slug/${params.slug}`)
       );
       setData(response.data.message); // Assuming the response data is an array
     } catch (error) {

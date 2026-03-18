@@ -1,4 +1,5 @@
 "use client";
+import { apiV1Url } from "@/app/constants/api";
 import { Stack, Typography } from "@mui/material";
 import Navbar from "../../navbar/Navbar";
 import Footer from "../../footer/Footer";
@@ -53,7 +54,7 @@ export default function Careers() {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://skytextiles.in/api/v1/careers/get-careers"
+        apiV1Url("/careers/get-careers")
       );
       setData(response.data.message); // Assuming the response data is an array
     } catch (error) {

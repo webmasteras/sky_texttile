@@ -1,10 +1,11 @@
+import { apiV1Url } from "@/app/constants/api";
 // import SkyTextiles from "@/app/components/company/parts/SkyPrimware";
 // import axios from "axios";
 // let data;
 // const fetchData = async () => {
 //   try {
 //     const response = await axios.get(
-//       "https://skytextiles.in/api/v1/seo/getByPageName?pagename=skyPrimware"
+//       apiV1Url("/seo/getByPageName?pagename=skyPrimware")
 //     );
 //     // setData(response.data.message); // Assuming the response data is an array
 
@@ -59,7 +60,7 @@ export async function generateMetadata() {
 
   try {
     const response = await fetch(
-      "https://skytextiles.in/api/v1/seo/getByPageName?pagename=skyPrimware",
+      apiV1Url("/seo/getByPageName?pagename=skyPrimware"),
       {
         cache: "no-store", // Fetches fresh data every time
       }
@@ -96,7 +97,7 @@ export default async function Page() {
   // Fetching the H1 and H2 data
   try {
     const response = await fetch(
-      "https://skytextiles.in/api/v1/seo/getByPageName?pagename=skyPrimware",
+      apiV1Url("/seo/getByPageName?pagename=skyPrimware"),
       {
         cache: "no-store", // Fetch fresh data every time
       }

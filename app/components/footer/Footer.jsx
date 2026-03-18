@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import { Box, Stack, TextField, Typography } from "@mui/material";
 import Image from "next/image";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -200,7 +200,7 @@ export default function Footer() {
   const handleSubscribe = async () => {
     try {
       const response = await axios.post(
-        "https://skytextiles.in/api/v1/newsletter/create",
+        apiV1Url("/newsletter/create"),
         { email }
       );
 

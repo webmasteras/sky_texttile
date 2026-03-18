@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import { useMemo, useRef, useState } from "react";
 import { InnerContainerHead } from "@/app/styledComponents/admin/AdminHead";
 import {
@@ -58,7 +58,7 @@ export default function EditBlog({ setEditModalOpen, fetchDepartments, blog }) {
 
     try {
       const response = await axios.post(
-        `https://skytextiles.in/api/v1/event/update/${blog._id}`,
+        apiV1Url(`/event/update/${blog._id}`),
         formData,
         {
           headers: {},
@@ -67,7 +67,7 @@ export default function EditBlog({ setEditModalOpen, fetchDepartments, blog }) {
       let imageResponse;
       if (isImageChanged) {
         imageResponse = await axios.post(
-          `https://skytextiles.in/api/v1/event/update-image/${blog._id}`,
+          apiV1Url(`/event/update-image/${blog._id}`),
           imageData
         );
       }

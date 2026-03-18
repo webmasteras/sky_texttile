@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import { InnerContainerHead } from "@/app/styledComponents/admin/AdminHead";
 import {
   BlueButtonSmall,
@@ -57,7 +57,7 @@ const [keywords, setkeywords] = useState("")
       formData.append("image", image);
 
       const response = await axios.post(
-        "https://skytextiles.in/api/v1/blog/create",
+        apiV1Url("/blog/create"),
         formData,
         {
           headers: {

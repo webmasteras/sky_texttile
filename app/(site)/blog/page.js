@@ -1,3 +1,4 @@
+import { apiV1Url } from "@/app/constants/api";
 import Blog from "@/app/components/blog/Blog";
 export const dynamic = "force-dynamic"; // Ensures the page is always dynamic
 
@@ -10,7 +11,7 @@ export async function generateMetadata() {
 
   try {
     const response = await fetch(
-      "https://skytextiles.in/api/v1/seo/getByPageName?pagename=blog",
+      apiV1Url("/seo/getByPageName?pagename=blog"),
       {
         cache: "no-store", // Fetches fresh data every time
       }
@@ -47,7 +48,7 @@ export default async function Page() {
   // Fetching the H1 and H2 data
   try {
     const response = await fetch(
-      "https://skytextiles.in/api/v1/seo/getByPageName?pagename=blog",
+      apiV1Url("/seo/getByPageName?pagename=blog"),
       {
         cache: "no-store", // Fetch fresh data every time
       }

@@ -1,3 +1,5 @@
+"use client";
+import { apiV1Url } from "@/app/constants/api";
 // "use client";
 
 // import { InnerContainerHead } from "@/app/styledComponents/admin/AdminHead";
@@ -53,7 +55,7 @@
 //       formData.append("image", image);
 
 //       const response = await axios.post(
-//         "https://skytextiles.in/api/v1/event/create",
+//         apiV1Url("/event/create"),
 //         formData,
 //         {
 //           headers: {
@@ -193,7 +195,7 @@
 // }
 
 //       const response = await axios.post(
-//         "https://skytextiles.in/api/v1/event/create",
+//         apiV1Url("/event/create"),
 //         formData,
 //         {
 //           headers: {
@@ -274,7 +276,6 @@
 // }
 
 
-"use client";
 
 import { InnerContainerHead } from "@/app/styledComponents/admin/AdminHead";
 import {
@@ -346,7 +347,7 @@ const handleSubmit = async () => {
 
     // Make API call
     const response = await axios.post(
-      "https://skytextiles.in/api/v1/event/create",
+      apiV1Url("/event/create"),
       formData,
       {
         headers: {

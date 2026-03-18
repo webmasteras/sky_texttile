@@ -1,3 +1,5 @@
+"use client";
+import { apiV1Url } from "@/app/constants/api";
 import { Stack, Typography } from "@mui/material";
 import ContactsIcon from "@mui/icons-material/Contacts";
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
@@ -87,7 +89,7 @@ export default function NavbarAdmin() {
 const fetchUserPermissions = async () => {
   const token = JSON.parse(localStorage.getItem("UserData"));
   try {
-    const response = await axios.get("https://skytextiles.in/api/v1/user/permissions", {
+    const response = await axios.get(apiV1Url("/user/permissions"), {
       headers: {
         "Authorization": `Bearer ${token}`, // pass the token
       },

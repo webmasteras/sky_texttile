@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import { useState, useRef, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { Stack } from "@mui/material";
@@ -41,7 +41,7 @@ export default function EditCareer({ careerData, setEditModalOpen, fetchDepartme
 
     try {
       const res = await axios.put(
-        `https://skytextiles.in/api/v1/careers/updateById?id=${careerData._id}`,
+        apiV1Url(`/careers/updateById?id=${careerData._id}`),
         editData,
         { headers: { "Content-Type": "application/json" } }
       );

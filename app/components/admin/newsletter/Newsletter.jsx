@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import {
   Box,
   CircularProgress,
@@ -44,7 +44,7 @@ export default function Contacts() {
   const fetchDepartments = async () => {
     try {
       const response = await axios.get(
-        "https://skytextiles.in/api/v1/newsletter/get-all"
+        apiV1Url("/newsletter/get-all")
       );
       if (response.status === 200) {
         setDepartments(response.data.message);

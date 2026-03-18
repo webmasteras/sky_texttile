@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
@@ -67,7 +67,7 @@ export default function SubAdmins() {
     if (!token) return;
     try {
       setLoading(true);
-      const res = await axios.get("https://skytextiles.in/api/v1/user/subadmins", {
+      const res = await axios.get(apiV1Url("/user/subadmins"), {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -94,7 +94,7 @@ export default function SubAdmins() {
   const handleDeleteUser = async (id) => {
     if (!confirm("Are you sure?")) return;
     try {
-      await axios.delete(`https://skytextiles.in/api/v1/user/${id}`, {
+      await axios.delete(apiV1Url(`/user/${id}`), {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchUsers();
@@ -107,8 +107,8 @@ export default function SubAdmins() {
   const handleToggleBlock = async (id, isBlocked) => {
     try {
       const endpoint = isBlocked
-        ? `https://skytextiles.in/api/v1/user/unblock/${id}`
-        : `https://skytextiles.in/api/v1/user/block/${id}`;
+        ? apiV1Url(`/user/unblock/${id}`)
+        : apiV1Url(`/user/block/${id}`);
       await axios.put(endpoint, null, { headers: { Authorization: `Bearer ${token}` } });
       fetchUsers();
     } catch (err) {

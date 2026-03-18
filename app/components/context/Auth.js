@@ -1,4 +1,5 @@
 "use client";
+import { apiV1Url } from "@/app/constants/api";
 import React, { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -22,7 +23,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     try {
       const response = await axios.post(
-        "https://skytextiles.in/api/v1/admin/login",
+        apiV1Url("/admin/login"),
         {
           email,
           password,

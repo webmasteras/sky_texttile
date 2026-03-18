@@ -1,4 +1,5 @@
-"use client"
+"use client";
+import { apiV1Url } from "@/app/constants/api";
 import { useState } from "react";
 import { InnerContainerHead } from "@/app/styledComponents/admin/AdminHead";
 import {
@@ -82,7 +83,7 @@ export default function EditSubAdmin({ setEditModalOpen, fetchUsers, user, token
       }
 
       const response = await axios.put(
-        `https://skytextiles.in/api/v1/user/${user._id}`,
+        apiV1Url(`/user/${user._id}`),
         dataToSend,
         {
           headers: { Authorization: `Bearer ${token}` },

@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
@@ -7,7 +7,7 @@ import axios from "axios";
 import Navbar from "@/app/components/navbar/Navbar";
 import Footer from "@/app/components/footer/Footer";
 
-const API_URL = "https://skytextiles.in/api/v1/event/get-all";
+const API_URL = apiV1Url("/event/get-all");
 
 export default function EventsPage() {
   const [events, setEvents] = useState([]);

@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import { useState } from "react";
 import { InnerContainerHead } from "@/app/styledComponents/admin/AdminHead";
 import {
@@ -86,7 +86,7 @@ export default function AddSubAdmin({ setViewForm, fetchUsers, token }) {
       const dataToSend = { ...formData, permissions: selectedPermissions, role: "subadmin" };
 
       const res = await axios.post(
-        "https://skytextiles.in/api/v1/user/register",
+        apiV1Url("/user/register"),
         dataToSend,
         { headers: { Authorization: `Bearer ${token}` } }
       );

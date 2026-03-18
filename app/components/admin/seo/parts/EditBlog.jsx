@@ -1,3 +1,5 @@
+"use client";
+import { apiV1Url } from "@/app/constants/api";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { InnerContainerHead } from "@/app/styledComponents/admin/AdminHead";
 import {
@@ -59,7 +61,7 @@ export default function EditBlog({ setEditModalOpen, fetchDepartments, data }) {
 
     try {
       const response = await axios.put(
-        `https://skytextiles.in/api/v1/seo/updateById?id=${data._id}`,
+        apiV1Url(`/seo/updateById?id=${data._id}`),
         metaData,
         {
           headers: {},

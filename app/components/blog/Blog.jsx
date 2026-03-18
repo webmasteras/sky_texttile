@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import { Box, Button, Stack, Typography } from "@mui/material";
 
 import banner from "./assets/eventsBanner.jpg";
@@ -233,7 +233,7 @@ export default function Events() {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://skytextiles.in/api/v1/blog/get-all"
+        apiV1Url("/blog/get-all")
       );
       setData(response.data.message); // Assuming the response data is an array
       setLoading(false);

@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import {
   Box,
   CircularProgress,
@@ -69,7 +69,7 @@ export default function Contacts() {
   const fetchDepartments = async () => {
     try {
       const response = await axios.get(
-        "https://skytextiles.in/api/v1/contact/get-all-details"
+        apiV1Url("/contact/get-all-details")
       );
       if (response.status === 200) {
         setDepartments(response.data.message);
@@ -94,7 +94,7 @@ export default function Contacts() {
 
     try {
       const response = await axios.delete(
-        `https://skytextiles.in/api/v1/contact/delete/${id}`
+        apiV1Url(`/contact/delete/${id}`)
       );
 
       if (response.data.statusCode === 200) {

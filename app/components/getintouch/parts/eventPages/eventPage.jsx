@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import Navbar from "../../../navbar/Navbar";
 import Footer from "../../../footer/Footer";
@@ -68,7 +68,7 @@ const [loading, setLoading] = useState(true);
  const fetchData = async () => {
    try {
      const response = await axios.get(
-       `https://skytextiles.in/api/v1/event/get-by-slug?slug=${slug}`
+       apiV1Url(`/event/get-by-slug?slug=${slug}`)
      );
      setEventData(response.data.message); // Assuming response.data.message contains the event details
      setLoading(false);

@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import {
   Box,
   CircularProgress,
@@ -71,7 +71,7 @@ export default function Careers() {
     try {
       setLoading(true);
       const res = await axios.get(
-        "https://skytextiles.in/api/v1/careers/get-careers"
+        apiV1Url("/careers/get-careers")
       );
       if (res.status === 200) {
         setDepartments(res.data.message || []);
@@ -94,8 +94,8 @@ export default function Careers() {
   const handleToggleBlock = async (id, isBlocked) => {
     try {
       const endpoint = isBlocked
-        ? `https://skytextiles.in/api/v1/careers/unblock-career/${id}`
-        : `https://skytextiles.in/api/v1/careers/block-career/${id}`;
+        ? apiV1Url(`/careers/unblock-career/${id}`)
+        : apiV1Url(`/careers/block-career/${id}`);
       const res = await axios.put(endpoint);
       if (res.data.statusCode === 200) fetchDepartments();
       else alert("Failed to update status.");
@@ -110,7 +110,7 @@ export default function Careers() {
     if (!confirm("Are you sure to delete this career?")) return;
     try {
       const res = await axios.delete(
-        `https://skytextiles.in/api/v1/careers/deleteById?id=${id}`
+        apiV1Url(`/careers/deleteById?id=${id}`)
       );
       if (res.data.statusCode === 200) fetchDepartments();
       else alert("Failed to delete career.");
@@ -140,7 +140,7 @@ export default function Careers() {
 
     try {
       const res = await axios.put(
-        `https://skytextiles.in/api/v1/careers/updateById/${currentCareer._id}`,
+        apiV1Url(`/careers/updateById/${currentCareer._id}`),
         editData
       );
 

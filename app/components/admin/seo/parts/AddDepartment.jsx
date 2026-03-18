@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -64,7 +64,7 @@ export default function AddDepartment({ setViewForm, fetchDepartments }) {
       const formData = metaData;
 
       const response = await axios.post(
-        "https://skytextiles.in/api/v1/seo/create-metadata",
+        apiV1Url("/seo/create-metadata"),
         formData,
         {
           headers: {},

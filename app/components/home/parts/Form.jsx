@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import { Button, Stack, TextField, Typography } from "@mui/material";
 import axios from "axios";
 import { useState } from "react";
@@ -24,7 +24,7 @@ export default function Form() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://skytextiles.in/api/v1/contact/form",
+        apiV1Url("/contact/form"),
         form
       );
       // console.log(response);

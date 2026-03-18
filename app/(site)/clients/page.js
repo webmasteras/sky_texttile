@@ -1,3 +1,4 @@
+import { apiV1Url } from "@/app/constants/api";
 // import Clients from "@/app/components/clients/Clients";
 // import axios from "axios";
 
@@ -5,7 +6,7 @@
 // const fetchData = async () => {
 //   try {
 //     const response = await axios.get(
-//       "https://skytextiles.in/api/v1/seo/getByPageName?pagename=clients"
+//       apiV1Url("/seo/getByPageName?pagename=clients")
 //     );
 
 //     data = response.data.message;
@@ -42,7 +43,7 @@ export async function generateMetadata() {
 
   try {
     const response = await fetch(
-      "https://skytextiles.in/api/v1/seo/getByPageName?pagename=clients",
+      apiV1Url("/seo/getByPageName?pagename=clients"),
       {
         cache: "no-store", // Fetches fresh data every time
       }
@@ -80,7 +81,7 @@ export default async function Page() {
   // Fetching the H1 and H2 data
   try {
     const response = await fetch(
-      "https://skytextiles.in/api/v1/seo/getByPageName?pagename=clients",
+      apiV1Url("/seo/getByPageName?pagename=clients"),
       {
         cache: "no-store", // Fetch fresh data every time
       }

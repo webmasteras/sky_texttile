@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -18,7 +18,7 @@ export default function EventGalleryPage() {
     const fetchEvent = async () => {
       try {
         const res = await axios.get(
-          "https://skytextiles.in/api/v1/event/get-all"
+          apiV1Url("/event/get-all")
         );
 
         console.log("Single Page API:", res.data);
@@ -166,7 +166,7 @@ export default function EventGalleryPage() {
 //     if (!eventId) return;
 
 //     axios
-//       .get("https://skytextiles.in/api/v1/event/get-all")
+//       .get(apiV1Url("/event/get-all"))
 //       .then((res) => {
 //         const allEvents = res.data.message;
 //         // const found = allEvents.find((ev) => ev._id === eventId);

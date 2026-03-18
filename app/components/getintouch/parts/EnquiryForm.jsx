@@ -1,4 +1,5 @@
 "use client";
+import { apiV1Url } from "@/app/constants/api";
 import { useState } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import left from "./assets/left.svg";
@@ -32,7 +33,7 @@ export default function Form() {
 
     try {
       const response = await fetch(
-        "https://skytextiles.in/api/v1/contact/form",
+        apiV1Url("/contact/form"),
         {
           method: "POST",
           headers: {

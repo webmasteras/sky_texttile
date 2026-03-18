@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import {
   Stack,
   Table,
@@ -72,7 +72,7 @@ const fetchDepartments = async () => {
   setLoading(true);
   try {
     const response = await axios.get(
-      "https://skytextiles.in/api/v1/event/get-all"
+      apiV1Url("/event/get-all")
     );
     const events = Array.isArray(response?.data?.data)
       ? response.data.data
@@ -89,8 +89,8 @@ const fetchDepartments = async () => {
   const handleToggleBlock = async (id, isBlocked) => {
     try {
       const endpoint = isBlocked
-        ? `https://skytextiles.in/api/v1/event/unblock-event/${id}`
-        : `https://skytextiles.in/api/v1/event/block-event/${id}`;
+        ? apiV1Url(`/event/unblock-event/${id}`)
+        : apiV1Url(`/event/block-event/${id}`);
 
       const response = await axios.put(endpoint);
 
@@ -110,7 +110,7 @@ const handleDeleteBlog = async (id) => {
   if (!window.confirm("Are you sure to delete this event?")) return;
 
   try {
-    const response = await axios.delete(`https://skytextiles.in/api/v1/event/delete/${id}`);
+    const response = await axios.delete(apiV1Url(`/event/delete/${id}`));
     if (response.data.statusCode === 200) fetchDepartments();
   } catch (error) {
     console.error("Error deleting event:", error);
@@ -134,7 +134,7 @@ const handleDeleteBlog = async (id) => {
 
     try {
       const response = await axios.post(
-        `https://skytextiles.in/api/v1/event/update/${currentBlog._id}`,
+        apiV1Url(`/event/update/${currentBlog._id}`),
         formData
       );
 

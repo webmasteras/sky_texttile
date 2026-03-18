@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import axios from "axios";
@@ -11,7 +11,7 @@ export default function EditSubAdmin() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    axios.get(`https://skytextiles.in/api/v1/user/${id}`)
+    axios.get(apiV1Url(`/user/${id}`))
       .then(res => setData(res.data))
       .catch(err => console.error(err));
   }, [id]);

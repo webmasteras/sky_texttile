@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import logo from "./assets/logo.png";

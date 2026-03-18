@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import { useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import { Stack } from "@mui/material";
@@ -24,7 +24,7 @@ export default function Createcareers({ setViewForm, fetchDepartments }) {
 
     try {
       const response = await axios.post(
-        "https://skytextiles.in/api/v1/careers/create-careers",
+        apiV1Url("/careers/create-careers"),
         formData,
         { headers: { "Content-Type": "application/json" } }
       );

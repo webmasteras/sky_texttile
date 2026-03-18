@@ -1,5 +1,5 @@
 "use client";
-
+import { apiV1Url } from "@/app/constants/api";
 import { useState } from "react";
 import { Dialog, DialogContent, Stack, Box, TextField, Button, FormGroup, FormControlLabel, Checkbox, Typography, Alert, IconButton, InputAdornment } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
@@ -22,7 +22,7 @@ export default function CreateSubAdmin({ setViewForm, fetchUsers }) {
     setLoading(true);
     const selectedPermissions = Object.keys(permissions).filter(p => permissions[p]);
     try {
-      const res = await axios.post("https://skytextiles.in/api/v1/user/register", {...formData, permissions: selectedPermissions}, { headers: { "Content-Type":"application/json" }});
+      const res = await axios.post(apiV1Url("/user/register"), {...formData, permissions: selectedPermissions}, { headers: { "Content-Type":"application/json" }});
       if(res.status === 200 || res.status === 201) {
         setAlert({type:"success", message:"Sub-admin created successfully!"});
         setFormData({ name: "", email: "", password: "", role: "subadmin" });
