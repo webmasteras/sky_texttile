@@ -135,7 +135,7 @@ const navData = [
         head: "Events",
         data: "Empowering growth, celebrating milestones, and shaping the future.",
         color: "#DFD5E6",
-        route: "/sustainability/event",
+        route: "/events",
       },
       {
         id: 2,
