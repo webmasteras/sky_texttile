@@ -325,6 +325,26 @@ export default function Enduro() {
       </Stack>
     </Link>
 
+      <div style={{ textAlign: "center", margin: "30px 0" }}>
+      <Link
+        href="https://skytextiles.in/events"
+        style={{
+          backgroundColor: "#E39B97",
+          color: "#fff",
+          padding: "12px 28px",
+          borderRadius: "6px",
+          textDecoration: "none",
+          fontFamily: "var(--font-poppins), sans-serif",
+          fontWeight: "500",
+          display: "inline-block",
+          letterSpacing: "0.3px"
+        }}
+      >
+        View All
+      </Link>
+    </div>
+      
+
       {/* ---- MOBILE SECTION ---- */}
 <Link href="/events">
       <Stack width={"100%"} gap={"10px"} display={{ md: "none" }}>
@@ -370,6 +390,24 @@ export default function Enduro() {
         ))}
       </Stack>
 </Link>
+      <div style={{ textAlign: "center", margin: "30px 0" }}>
+      <Link
+        href="https://skytextiles.in/events"
+        style={{
+          backgroundColor: "#E39B97",
+          color: "#fff",
+          padding: "12px 28px",
+          borderRadius: "6px",
+          textDecoration: "none",
+          fontFamily: "var(--font-poppins), sans-serif",
+          fontWeight: "500",
+          display: "inline-block",
+          letterSpacing: "0.3px"
+        }}
+      >
+        View All
+      </Link>
+    </div>
     </Stack>
   );
 }
