@@ -68,7 +68,6 @@ export default function Enduro() {
       );
   });
 
-  // ✅ Use direct public URLs instead of imports
   const enduro1 = "/assets/events/b1.JPG";
   const enduro2 = "/assets/events/b2.JPG";
   const enduro3 = "/assets/events/s1.JPG";
@@ -86,294 +85,52 @@ export default function Enduro() {
       </Typography>
 
       {/* ---- FIRST SECTION ---- */}
-     <Link href="/events">
-      <Stack
-        display={{ md: "flex", xs: "none" }}
-        width={"100%"}
-        alignItems={"end"}
-        height={{ lg: "80vh", md: "55vh" }}
-        direction={"row"}
-        gap={"10px"}
-      >
+      <Link href="/events">
         <Stack
-          width={"40%"}
-          height={"70%"}
-          position={"relative"}
-          sx={{
-            backgroundImage: `url(${enduro3})`,
-            backgroundSize: "160%",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center center",
-            transition: "all 0.3s ease",
-            "&:hover": { backgroundSize: "175%" },
-            "&::after": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.4)",
-              zIndex: 1,
-            },
-          }}
-          className="image3"
+          display={{ md: "flex", xs: "none" }}
+          width={"100%"}
+          alignItems={"end"}
+          height={{ lg: "80vh", md: "55vh" }}
+          direction={"row"}
+          gap={"10px"}
         >
           <Stack
-            position={"absolute"}
-            direction={"row"}
+            width={"40%"}
+            height={"70%"}
+            position={"relative"}
             sx={{
-              bottom: "0",
-              width: "100%",
-              padding: "20px",
-              zIndex: 3,
-            }}
-            justifyContent={"space-between"}
-          >
-            <Typography color="white">Enterpreneur's Launchpad</Typography>
-            <Stack
-              backgroundColor={"#E39B97"}
-              width={"25px"}
-              height={"25px"}
-              justifyContent={"center"}
-              alignItems={"center"}
-              borderRadius={"2px"}
-              sx={{
-                transition: "all 0.4s ease",
-                cursor: "pointer",
-                "&: hover": { scale: "1.6" },
-              }}
-            >
-              <MdOutlineArrowOutward color="white" />
-            </Stack>
-          </Stack>
-        </Stack>
-
-        <Box
-          width={"60%"}
-          height={"100%"}
-          position={"relative"}
-          sx={{
-            backgroundImage: `url(${enduro1})`,
-            backgroundSize: "100%",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center 0px",
-            transition: "all 0.3s ease",
-            "&:hover": { backgroundSize: "175%" },
-            "&::after": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.4)",
-              zIndex: 1,
-            },
-          }}
-          className="image"
-        >
-          <Stack
-            position={"absolute"}
-            direction={"row"}
-            sx={{
-              bottom: "0",
-              width: "100%",
-              zIndex: 3,
-              padding: "20px",
-            }}
-            justifyContent={"space-between"}
-          >
-            <Typography color="white">Bharat-Tex</Typography>
-            <Stack
-              backgroundColor={"#E39B97"}
-              width={"25px"}
-              height={"25px"}
-              justifyContent={"center"}
-              alignItems={"center"}
-              borderRadius={"2px"}
-              sx={{
-                transition: "all 0.4s ease",
-                cursor: "pointer",
-                "&: hover": { scale: "1.6" },
-              }}
-            >
-              <MdOutlineArrowOutward color="white" />
-            </Stack>
-          </Stack>
-        </Box>
-      </Stack>
-
-     </Link>
-      {/* ---- SECOND SECTION ---- */}
-           <Link href="/events">
-      <Stack
-        display={{ md: "flex", xs: "none" }}
-        width={"100%"}
-        alignItems={"start"}
-        height={{ lg: "80vh", md: "55vh" }}
-        direction={"row"}
-        gap={"10px"}
-      >
-        <Box
-          width={"60%"}
-          height={"100%"}
-          position={"relative"}
-          sx={{
-            backgroundImage: `url(${enduro2})`,
-            backgroundSize: "150%",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center 0px",
-            transition: "all 0.3s ease",
-            "&:hover": { backgroundSize: "175%" },
-            "&::after": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.4)",
-              zIndex: 1,
-            },
-          }}
-          className="image2"
-        >
-          <Stack
-            position={"absolute"}
-            direction={"row"}
-            sx={{
-              bottom: "0",
-              width: "100%",
-              zIndex: 3,
-              padding: "20px",
-            }}
-            justifyContent={"space-between"}
-          >
-            <Typography color="white">Emerging Legends of Gujarat</Typography>
-            <Stack
-              backgroundColor={"#E39B97"}
-              width={"25px"}
-              height={"25px"}
-              justifyContent={"center"}
-              alignItems={"center"}
-              borderRadius={"2px"}
-              sx={{
-                transition: "all 0.4s ease",
-                cursor: "pointer",
-                "&: hover": { scale: "1.6" },
-              }}
-            >
-              <MdOutlineArrowOutward color="white" />
-            </Stack>
-          </Stack>
-        </Box>
-
-        <Box
-          width={"40%"}
-          height={"70%"}
-          position={"relative"}
-          sx={{
-            backgroundImage: `url(${enduro4})`,
-            backgroundSize: "160%",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center center",
-            transition: "all 0.3s ease",
-            "&:hover": { backgroundSize: "175%" },
-            "&::after": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.4)",
-              zIndex: 1,
-            },
-          }}
-          className="image4"
-        >
-          <Stack
-            position={"absolute"}
-            direction={"row"}
-            sx={{
-              bottom: "0",
-              width: "100%",
-              zIndex: 3,
-              padding: "20px",
-            }}
-            justifyContent={"space-between"}
-          >
-            <Typography color="white">x Vibrant Gujarat</Typography>
-            <Stack
-              backgroundColor={"#E39B97"}
-              width={"25px"}
-              height={"25px"}
-              justifyContent={"center"}
-              alignItems={"center"}
-              borderRadius={"2px"}
-              sx={{
-                transition: "all 0.4s ease",
-                cursor: "pointer",
-                "&: hover": { scale: "1.6" },
-              }}
-            >
-              <MdOutlineArrowOutward color="white" />
-            </Stack>
-          </Stack>
-        </Box>
-      </Stack>
-    </Link>
-
-      <div style={{ textAlign: "center", margin: "30px 0" }}>
-      <Link
-        href="https://skytextiles.in/events"
-        style={{
-          backgroundColor: "#E39B97",
-          color: "#fff",
-          padding: "12px 28px",
-          borderRadius: "6px",
-          textDecoration: "none",
-          fontFamily: "var(--font-poppins), sans-serif",
-          fontWeight: "500",
-          display: "inline-block",
-          letterSpacing: "0.3px"
-        }}
-      >
-        View All
-      </Link>
-    </div>
-      
-
-      {/* ---- MOBILE SECTION ---- */}
-<Link href="/events">
-      <Stack width={"100%"} gap={"10px"} display={{ md: "none" }}>
-        {[enduro1, enduro2, enduro3, enduro4].map((img, i) => (
-          <Box
-            key={i}
-            width={"100%"}
-            height={"40vh"}
-            position="relative"
-            sx={{
-              backgroundImage: `url(${img})`,
-              backgroundSize: "cover",
+              backgroundImage: `url(${enduro3})`,
+              backgroundSize: "160%",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center center",
+              transition: "all 0.3s ease",
+              "&:hover": { backgroundSize: "175%" },
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: "rgba(0, 0, 0, 0.4)",
+                zIndex: 1,
+              },
             }}
+            className="image3"
           >
             <Stack
               position={"absolute"}
               direction={"row"}
               sx={{
-                bottom: "5%",
-                backgroundColor: "rgba(0, 0, 0, 0.6)",
+                bottom: "0",
                 width: "100%",
                 padding: "20px",
+                zIndex: 3,
               }}
               justifyContent={"space-between"}
             >
               <Typography color="white">
-                {["Bharat-Tex", "Emerging Legends", "Enterpreneur's Launchpad", "Vibrant Gujarat"][i]}
+                Enterpreneur's Launchpad
               </Typography>
               <Stack
                 backgroundColor={"#E39B97"}
@@ -382,32 +139,277 @@ export default function Enduro() {
                 justifyContent={"center"}
                 alignItems={"center"}
                 borderRadius={"2px"}
+                sx={{
+                  transition: "all 0.4s ease",
+                  cursor: "pointer",
+                  "&:hover": { scale: "1.6" },
+                }}
+              >
+                <MdOutlineArrowOutward color="white" />
+              </Stack>
+            </Stack>
+          </Stack>
+
+          <Box
+            width={"60%"}
+            height={"100%"}
+            position={"relative"}
+            sx={{
+              backgroundImage: `url(${enduro1})`,
+              backgroundSize: "100%",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center 0px",
+              transition: "all 0.3s ease",
+              "&:hover": { backgroundSize: "175%" },
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: "rgba(0, 0, 0, 0.4)",
+                zIndex: 1,
+              },
+            }}
+            className="image"
+          >
+            <Stack
+              position={"absolute"}
+              direction={"row"}
+              sx={{
+                bottom: "0",
+                width: "100%",
+                zIndex: 3,
+                padding: "20px",
+              }}
+              justifyContent={"space-between"}
+            >
+              <Typography color="white">Bharat-Tex</Typography>
+              <Stack
+                backgroundColor={"#E39B97"}
+                width={"25px"}
+                height={"25px"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                borderRadius={"2px"}
+                sx={{
+                  transition: "all 0.4s ease",
+                  cursor: "pointer",
+                  "&:hover": { scale: "1.6" },
+                }}
               >
                 <MdOutlineArrowOutward color="white" />
               </Stack>
             </Stack>
           </Box>
-        ))}
-      </Stack>
-</Link>
-      <div style={{ textAlign: "center", margin: "30px 0" }}>
-      <Link
-        href="https://skytextiles.in/events"
-        style={{
-          backgroundColor: "#E39B97",
-          color: "#fff",
-          padding: "12px 28px",
-          borderRadius: "6px",
-          textDecoration: "none",
-          fontFamily: "var(--font-poppins), sans-serif",
-          fontWeight: "500",
-          display: "inline-block",
-          letterSpacing: "0.3px"
-        }}
-      >
-        View All
+        </Stack>
       </Link>
-    </div>
+
+      {/* ---- SECOND SECTION ---- */}
+      <Link href="/events">
+        <Stack
+          display={{ md: "flex", xs: "none" }}
+          width={"100%"}
+          alignItems={"start"}
+          height={{ lg: "80vh", md: "55vh" }}
+          direction={"row"}
+          gap={"10px"}
+        >
+          <Box
+            width={"60%"}
+            height={"100%"}
+            position={"relative"}
+            sx={{
+              backgroundImage: `url(${enduro2})`,
+              backgroundSize: "150%",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center 0px",
+              transition: "all 0.3s ease",
+              "&:hover": { backgroundSize: "175%" },
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: "rgba(0, 0, 0, 0.4)",
+                zIndex: 1,
+              },
+            }}
+            className="image2"
+          >
+            <Stack
+              position={"absolute"}
+              direction={"row"}
+              sx={{
+                bottom: "0",
+                width: "100%",
+                zIndex: 3,
+                padding: "20px",
+              }}
+              justifyContent={"space-between"}
+            >
+              <Typography color="white">
+                Emerging Legends of Gujarat
+              </Typography>
+              <Stack
+                backgroundColor={"#E39B97"}
+                width={"25px"}
+                height={"25px"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                borderRadius={"2px"}
+                sx={{
+                  transition: "all 0.4s ease",
+                  cursor: "pointer",
+                  "&:hover": { scale: "1.6" },
+                }}
+              >
+                <MdOutlineArrowOutward color="white" />
+              </Stack>
+            </Stack>
+          </Box>
+
+          <Box
+            width={"40%"}
+            height={"70%"}
+            position={"relative"}
+            sx={{
+              backgroundImage: `url(${enduro4})`,
+              backgroundSize: "160%",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center center",
+              transition: "all 0.3s ease",
+              "&:hover": { backgroundSize: "175%" },
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: "rgba(0, 0, 0, 0.4)",
+                zIndex: 1,
+              },
+            }}
+            className="image4"
+          >
+            <Stack
+              position={"absolute"}
+              direction={"row"}
+              sx={{
+                bottom: "0",
+                width: "100%",
+                zIndex: 3,
+                padding: "20px",
+              }}
+              justifyContent={"space-between"}
+            >
+              <Typography color="white">
+                x Vibrant Gujarat
+              </Typography>
+              <Stack
+                backgroundColor={"#E39B97"}
+                width={"25px"}
+                height={"25px"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                borderRadius={"2px"}
+                sx={{
+                  transition: "all 0.4s ease",
+                  cursor: "pointer",
+                  "&:hover": { scale: "1.6" },
+                }}
+              >
+                <MdOutlineArrowOutward color="white" />
+              </Stack>
+            </Stack>
+          </Box>
+        </Stack>
+      </Link>
+
+      {/* ---- MOBILE SECTION ---- */}
+      <Link href="/events">
+        <Stack width={"100%"} gap={"10px"} display={{ md: "none" }}>
+          {[enduro1, enduro2, enduro3, enduro4].map((img, i) => (
+            <Box
+              key={i}
+              width={"100%"}
+              height={"40vh"}
+              position="relative"
+              sx={{
+                backgroundImage: `url(${img})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center center",
+              }}
+            >
+              <Stack
+                position={"absolute"}
+                direction={"row"}
+                sx={{
+                  bottom: "5%",
+                  backgroundColor: "rgba(0, 0, 0, 0.6)",
+                  width: "100%",
+                  padding: "20px",
+                }}
+                justifyContent={"space-between"}
+              >
+                <Typography color="white">
+                  {
+                    [
+                      "Bharat-Tex",
+                      "Emerging Legends",
+                      "Enterpreneur's Launchpad",
+                      "Vibrant Gujarat",
+                    ][i]
+                  }
+                </Typography>
+                <Stack
+                  backgroundColor={"#E39B97"}
+                  width={"25px"}
+                  height={"25px"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  borderRadius={"2px"}
+                >
+                  <MdOutlineArrowOutward color="white" />
+                </Stack>
+              </Stack>
+            </Box>
+          ))}
+        </Stack>
+      </Link>
+
+      {/* ---- SINGLE RESPONSIVE BUTTON ---- */}
+      <Box
+        width="100%"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        mt={{ md: 5, xs: 3 }}
+        mb={{ md: 4, xs: 2 }}
+      >
+        <Link
+          href="https://skytextiles.in/events"
+          style={{
+            backgroundColor: "#E39B97",
+            color: "#fff",
+            padding: "12px 32px",
+            borderRadius: "6px",
+            textDecoration: "none",
+            fontFamily: "var(--font-poppins), sans-serif",
+            fontWeight: "400",
+            display: "inline-block",
+            letterSpacing: "0.4px",
+            transition: "all 0.3s ease",
+          }}
+        >
+          View All
+        </Link>
+      </Box>
     </Stack>
   );
 }
